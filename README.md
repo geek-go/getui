@@ -2,7 +2,7 @@
 个推push
 
 ![](https://img.shields.io/badge/build-passing-brightgreen.svg?maxAge=2592000)
-[![Software License](http://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
+[![Software License](http://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 [![GoDoc](https://godoc.org/github.com/geek-go/getui?status.svg)](https://godoc.org/github.com/geek-go/getui)
 
 由于官方没有推出Go版本的推送SDK，故自己实现了。支持：
