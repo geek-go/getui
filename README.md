@@ -38,6 +38,10 @@ go test -v  -run="^TestGeTui_SendAll$"
 
 > 测试用例里针对SDK进行了一些封装，大家可以参考快速实现。例如`IGtTransmissionTemplate()`是透传模板的实现。其它模板可以参考实现，比较简单。
 
+## 文档参考
+
+https://godoc.org/github.com/geek-go/getui
+
 ## 如何参与该项目
 
 如果需要增加个推其它接口的实现，请参考`api_`开头的文件实现。规范：
