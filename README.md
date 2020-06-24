@@ -40,7 +40,7 @@ go test -v  -run="^TestGeTui_SendAll$"
 
 ## 文档参考
 
-https://godoc.org/github.com/geek-go/getui
+https://pkg.go.dev/github.com/geek-go/getui
 
 ## 如何参与该项目
 
