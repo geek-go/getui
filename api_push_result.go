@@ -30,7 +30,7 @@ type PushResult struct {
 }
 
 //获取推送结果接口
-func GetPushResult(appId string, auth_token string, param *PushResultParam) (*PushResult, error) {
+func GetPushResult(appId string, authToken string, param *PushResultParam) (*PushResult, error) {
 
 	url := API_URL + appId + "/push_result"
 	bodyByte, err := MakeReqBody(param)
@@ -38,7 +38,7 @@ func GetPushResult(appId string, auth_token string, param *PushResultParam) (*Pu
 		return nil, err
 	}
 
-	result, err := SendPost(url, auth_token, bodyByte)
+	result, err := SendPost(url, authToken, bodyByte)
 	if err != nil {
 		return nil, err
 	}

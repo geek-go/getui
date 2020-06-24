@@ -21,14 +21,14 @@ type PushListResult struct {
 }
 
 //群推
-func PushList(appId string, auth_token string, param *PushListParam) (*PushListResult, error) {
+func PushList(appId string, authToken string, param *PushListParam) (*PushListResult, error) {
 	url := API_URL + appId + "/push_list"
 	bodyByte, err := MakeReqBody(param)
 	if err != nil {
 		return nil, err
 	}
 
-	result, err := SendPost(url, auth_token, bodyByte)
+	result, err := SendPost(url, authToken, bodyByte)
 	if err != nil {
 		return nil, err
 	}

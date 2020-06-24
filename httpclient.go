@@ -10,7 +10,7 @@ import (
 )
 
 //post请求
-func SendPost(url string, auth_token string, bodyByte []byte) (string, error) {
+func SendPost(url string, authToken string, bodyByte []byte) (string, error) {
 	//创建客户端实例
 	client := &http.Client{
 		Timeout: 10 * time.Second,
@@ -26,7 +26,7 @@ func SendPost(url string, auth_token string, bodyByte []byte) (string, error) {
 		return "", err
 	}
 
-	req.Header.Add("authtoken", auth_token)
+	req.Header.Add("authtoken", authToken)
 	req.Header.Add("Charset", "UTF-8")
 	req.Header.Add("Content-Type", "application/json")
 
@@ -50,9 +50,9 @@ func SendPost(url string, auth_token string, bodyByte []byte) (string, error) {
 }
 
 //生成请求参数对应的JSON
-func MakeReqBody(parmar interface{}) ([]byte, error) {
+func MakeReqBody(param interface{}) ([]byte, error) {
 
-	body, err := json.Marshal(parmar)
+	body, err := json.Marshal(param)
 	if err != nil {
 		return nil, err
 	}

@@ -22,7 +22,7 @@ type SaveListBodyResult struct {
 }
 
 //保存消息共同体,获取推送taskid
-func SaveListBody(appId string, auth_token string, param *SaveListBodyParam) (*SaveListBodyResult, error) {
+func SaveListBody(appId string, authToken string, param *SaveListBodyParam) (*SaveListBodyResult, error) {
 
 	url := API_URL + appId + "/save_list_body"
 	bodyByte, err := MakeReqBody(param)
@@ -30,7 +30,7 @@ func SaveListBody(appId string, auth_token string, param *SaveListBodyParam) (*S
 		return nil, err
 	}
 
-	result, err := SendPost(url, auth_token, bodyByte)
+	result, err := SendPost(url, authToken, bodyByte)
 	if err != nil {
 		return nil, err
 	}

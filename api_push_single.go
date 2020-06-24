@@ -24,7 +24,7 @@ type PushSingleResult struct {
 }
 
 //单推
-func PushSingle(appId string, auth_token string, param *PushSingleParam) (*PushSingleResult, error) {
+func PushSingle(appId string, authToken string, param *PushSingleParam) (*PushSingleResult, error) {
 
 	url := API_URL + appId + "/push_single"
 	bodyByte, err := MakeReqBody(param)
@@ -32,7 +32,7 @@ func PushSingle(appId string, auth_token string, param *PushSingleParam) (*PushS
 		return nil, err
 	}
 
-	result, err := SendPost(url, auth_token, bodyByte)
+	result, err := SendPost(url, authToken, bodyByte)
 	if err != nil {
 		return nil, err
 	}

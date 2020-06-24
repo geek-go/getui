@@ -43,14 +43,14 @@ type PushAppResult struct {
 }
 
 //全推,http://docs.getui.com/getui/server/rest/push/#doc-title-2
-func PushApp(appId string, auth_token string, param *PushAppParam) (*PushAppResult, error) {
+func PushApp(appId string, authToken string, param *PushAppParam) (*PushAppResult, error) {
 	url := API_URL + appId + "/push_app"
 	bodyByte, err := MakeReqBody(param)
 	if err != nil {
 		return nil, err
 	}
 
-	result, err := SendPost(url, auth_token, bodyByte)
+	result, err := SendPost(url, authToken, bodyByte)
 	if err != nil {
 		return nil, err
 	}
